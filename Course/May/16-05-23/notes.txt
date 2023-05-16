@@ -30,6 +30,8 @@ import/export - async in nature - (reactjs/angular)- Babel - lower module - es6
 commonjs - default in nodejs 
 require  - sync in nature
 =========================================
+module - collection of files.
+===============================
 
 
 

@@ -19,5 +19,10 @@ const readFile = async()=>{
     //buffer to unicode character 
     console.log(result.toString());
 }
-readFile();
+//readFile();
 
+const appendFile = async()=>{
+    await file.appendFile('data/newton.txt'," And my name is suresh");
+    console.log("file is appended successfully");
+}
+appendFile();
