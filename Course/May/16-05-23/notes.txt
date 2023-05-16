@@ -33,6 +33,15 @@ require  - sync in nature
 module - collection of files.
 ===============================
 Creating our custom modules 
+==============================
+Event Emitter:
+//events helps to trigger some function to do some business logic execution.
+//It consists of two process 
+     1.triggering event - (whenever data is available or data is ready);
+     2.listenining to that event and returning response.
+//all the code is written async in nature.     
+================================================
+
 
 
 
