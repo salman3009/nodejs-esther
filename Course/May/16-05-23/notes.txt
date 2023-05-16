@@ -24,5 +24,13 @@ The entire nodejs architecture will work in async nature
 Inbuilt packages in Nodejs 
 1.os 
 2.fs 
+=========================================
+esmodules 
+import/export - async in nature - (reactjs/angular)- Babel - lower module - es6
+commonjs - default in nodejs 
+require  - sync in nature
+=========================================
+
+
 
 
