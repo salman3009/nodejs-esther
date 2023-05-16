@@ -11,4 +11,13 @@ const writeFile = async()=>{
        console.log(err);  
     }
 }
-writeFile();
+// writeFile();
+
+const readFile = async()=>{
+    let result = await file.readFile('data/newton.txt');
+    //console.log(result);
+    //buffer to unicode character 
+    console.log(result.toString());
+}
+readFile();
+
