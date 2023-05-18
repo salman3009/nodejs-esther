@@ -41,4 +41,11 @@ Get method --> it is supported default in all browsers.
 post method --> it can be check using postman if you not integrated the frontend application.
 postman tool - it is use to check api is working or not.
 ========================================================
+Post method:
+//Data is coming from frontend 
+//Event emitter for incoming data. listen (on method)
+//For incoming take data in the form of Buffer 
+//Buffer convert into toString() --> unicode character.
+//If object is coming after toString() it will convert into json format to convert into javascript object use JSON.parse().
+==============================================
 
