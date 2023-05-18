@@ -1,0 +1,40 @@
+HTTP server?
+server - something that is running 24*7 and providing service to customer or end user
+http - hypertext tranfer protocol
+//hypermedia information communicated using internet
+=======================================
+http method:
+get - fetching information 
+post - posting data 
+
+Each http structure 
+header
+body 
+
+get - header 
+post - header/body 
+====================================
+http status code:
+200 or 300 - success 
+400 or 500 - error 
+==============================
+Any http request will have two things 
+1.request  - what frontend is asking?
+2.response - server is responding back 
+===============================
+frontend and backend how they are communicating?
+frontend - html/css/javascript - reactjs/angular/vuejs 
+backend - nodejs/expressjs
+//json - data binding 
+//html
+//css 
+//js 
+//text 
+//csv 
+//image 
+//video 
+======================================
+
+
+
+
