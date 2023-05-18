@@ -34,7 +34,11 @@ backend - nodejs/expressjs
 //image 
 //video 
 ======================================
-
-
-
+JSON.parse() - it will convert json to javascript 
+JSON.stringify() -it will convert javascript to json 
+=============================================
+Get method --> it is supported default in all browsers.
+post method --> it can be check using postman if you not integrated the frontend application.
+postman tool - it is use to check api is working or not.
+========================================================
 
