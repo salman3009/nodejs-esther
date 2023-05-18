@@ -15,8 +15,16 @@ const server = http.createServer((req,res)=>{
             //convert string to object
             result = JSON.parse(result);
             console.log(result);
-            res.writeHead(200,{'Content-Type':'text/plain'});
-            res.end("finally post method");
+            if(result.email != "akash@gmail.com"){
+                res.writeHead(400,{'Content-Type':'text/plain'});
+                return res.end("email is not found");
+            }
+            if(result.password != "12345"){
+                res.writeHead(400,{'Content-Type':'text/plain'});
+                return res.end("password is not found");
+            }
+            res.writeHead(200,{'Content-Type':'text/html'});
+            res.end("<h1>successfully you can able to login</h1>");
 
         })
     }
