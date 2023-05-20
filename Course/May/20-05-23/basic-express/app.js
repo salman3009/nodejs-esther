@@ -17,6 +17,13 @@ app.get('/list',(req,res)=>{
     })
 })
 
+app.get('/product',(req,res)=>{
+    res.status(200).json({
+        name:"AC",
+        price:2000,
+        status:true
+    })
+})
 
 
 
