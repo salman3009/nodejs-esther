@@ -25,6 +25,10 @@ app.get('/product',(req,res)=>{
     })
 })
 
+app.get('/bootstrap',(req,res)=>{
+    res.sendFile(__dirname+'/index.html');
+})
+
 
 
 
