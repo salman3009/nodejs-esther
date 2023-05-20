@@ -15,6 +15,7 @@ get - header
 post - header/body 
 ====================================
 http status code:
+//Helps to send response to frontend. So frontend can able to understand the message.
 200 or 300 - success 
 400 or 500 - error 
 ==============================
