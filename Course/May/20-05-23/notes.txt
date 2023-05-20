@@ -18,3 +18,7 @@ To setup the backend project.
 Creating package.json file 
 cmd:npm init            
 ========================================
+Inside Express Process:
+1.npm i express
+2.we need to setup http server inside the express.
+
