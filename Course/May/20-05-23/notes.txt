@@ -21,4 +21,7 @@ cmd:npm init
 Inside Express Process:
 1.npm i express
 2.we need to setup http server inside the express.
-
+3.we have use get method to response it back the incoming request 
+4.we have written different url string to response different data.
+5.we can able to send html file,json data.
+===============================================
