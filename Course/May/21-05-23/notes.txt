@@ -15,3 +15,23 @@ Status code:
 200 - successfully data is fetched 
 201 - successfully data is created inside the database.
 ===================================================
+Post method 
+1.we can send json data from frontend 
+{
+    "firstName":"akash",
+    "age":22
+}
+2.we can send files from frontend  (html/css/img/csv/video/audio)
+3.we can send query string from frontend 
+http://localhost:3000?firstName=akash&age=22
+===========================================
+How will you parse incoming data in nodejs 
+//we can use third party package called body-parser to parse the data.
+=============================================
+Middleware:
+//Handling incoming request
+//Act in intermediate between request and response.
+How to write middleware insid the expressjs 
+//app.use() method 
+//After doing everything just use next() method to proceed further.
+==============================================================
