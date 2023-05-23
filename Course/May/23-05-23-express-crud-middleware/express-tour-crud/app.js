@@ -21,6 +21,15 @@ app.post('/register',(req,res)=>{
     }
 })
 
+app.post('/login',(req,res)=>{
+    if(req.body.email && req.body.password){
+        res.sendFile(__dirname+'/dashboard.html');
+    }
+    else{
+        res.sendFile(__dirname+"/error.html");
+    }
+})
+
 app.listen(3000,()=>{
     console.log("server is running on 30000");
 })
