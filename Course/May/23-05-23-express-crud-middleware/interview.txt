@@ -3,3 +3,5 @@
 //We need to use body-parser third party package.
 3.how to send html file from backend.
 //we need to use sendFile() from express to send the html file 
+4.what is serversiderendering
+//each html page will be serve from backend api
