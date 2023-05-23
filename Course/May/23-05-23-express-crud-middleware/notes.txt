@@ -1,0 +1,7 @@
+Today session:
+1.register api 
+2.login api 
+3.tour create api 
+4.tour get api 
+5.tour update api 
+6.tour delete api
