@@ -5,13 +5,20 @@ const parser = require('body-parser');
 app.use(parser.json());
 app.use(parser.urlencoded({extended:false}));
 
+let user={};
+
 app.get('',(req,res)=>{
    res.sendFile(__dirname+"/index.html");
 })
 
 app.post('/register',(req,res)=>{
-    console.log(req.body);
-   res.send("successfully");
+    if(req.body.email && req.body.userName && req.body.password){
+        user=req.body;
+        res.sendFile(__dirname+'/login.html');
+    }
+    else{
+        res.sendFile(__dirname+"/error.html");
+    }
 })
 
 app.listen(3000,()=>{
