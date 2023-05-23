@@ -21,13 +21,17 @@ app.post('/register',(req,res)=>{
     }
 })
 
-app.post('/login',(req,res)=>{
-    if(req.body.email && req.body.password){
+const loginValidationMiddleware=(req,res,next)=>{
+    console.log("coming to loginValidationMiddleware");
+    if(!req.body.email || !req.body.password){
+        return res.sendFile(__dirname+"/error.html");
+    }
+    return next();
+}
+
+app.post('/login',loginValidationMiddleware,(req,res)=>{
+        console.log("login controller");
         res.sendFile(__dirname+'/dashboard.html');
-    }
-    else{
-        res.sendFile(__dirname+"/error.html");
-    }
 })
 
 app.listen(3000,()=>{
