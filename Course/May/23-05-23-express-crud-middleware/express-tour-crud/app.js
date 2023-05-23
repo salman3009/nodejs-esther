@@ -29,7 +29,16 @@ const loginValidationMiddleware=(req,res,next)=>{
     return next();
 }
 
-app.post('/login',loginValidationMiddleware,(req,res)=>{
+const loginCheckingDetailsMiddleware=(req,res,next)=>{
+    console.log("checking email and password data");
+    if(req.body.email != user.email || req.body.password != user.password){
+        return res.sendFile(__dirname + '/error.html');
+    }
+    return next();
+}
+
+
+app.post('/login',loginValidationMiddleware,loginCheckingDetailsMiddleware,(req,res)=>{
         console.log("login controller");
         res.sendFile(__dirname+'/dashboard.html');
 })
