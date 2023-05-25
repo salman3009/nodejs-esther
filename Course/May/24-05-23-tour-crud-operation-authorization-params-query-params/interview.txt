@@ -1,0 +1,4 @@
+What is spread operation?
+//It helps to spread array or object into individual variable.
+//It will create deep copy of array and object.
+========================================

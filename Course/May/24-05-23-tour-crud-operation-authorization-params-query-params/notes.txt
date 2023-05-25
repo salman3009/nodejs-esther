@@ -1,0 +1,9 @@
+//We are creating four api 
+1.create operation and storing along with user details 
+2.read operation with filtering the data.
+   //if the role is user he can see only his data.
+   //if the role is admin he can able to see all the data.
+===========================================================
+register--login-->saving credentials -->authentication process
+tourapi-creation --> middleware(roles/verification) - authorization process
+===================================================================
