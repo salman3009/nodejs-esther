@@ -2,3 +2,12 @@ What is spread operation?
 //It helps to spread array or object into individual variable.
 //It will create deep copy of array and object.
 ========================================
+What is authentication process?
+//registration--login--sending back dashboard page 
+=====================================
+what is authorization process?
+//Depends upon the role we are protecting the api and operation will be done upons upon the role.
+=====================================================
+How you will protected the api?
+//we can attached middleware and we can write validatin and verification details inside the middleware.
+=================================================

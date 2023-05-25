@@ -69,8 +69,21 @@ app.post('/tourcreate',checkLoginStatus,(req,res)=>{
     res.sendFile(__dirname+'/dashboard.html');
 })
 
-app.get('/tourread',(req,res)=>{
+//progress 1 - bringing all data
+// app.get('/tourread',(req,res)=>{
+//     console.log("everything is created successfully");
+//     res.status(200).json({
+//         data:list
+//     });
+// })
+
+
+//progress 2 - filtering data only with particular property
+//url params
+//http://localhost:3000/tourread/sydney/mumbai
+app.get('/tourread/:source/:destination',(req,res)=>{
     console.log("everything is created successfully");
+    console.log("params",req.params.source,req.params.destination);
     res.status(200).json({
         data:list
     });
