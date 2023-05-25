@@ -65,6 +65,11 @@ app.post('/tourcreate',checkLoginStatus,(req,res)=>{
     res.sendFile(__dirname+'/dashboard.html');
 })
 
+app.get('/tourread',(req,res)=>{
+    console.log("everything is created successfully");
+    res.send('<h1>reading data</h1>');
+})
+
 
 app.listen(3000,()=>{
     console.log("server is running on 30000");
