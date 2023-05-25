@@ -9,4 +9,9 @@ tourapi-creation --> middleware(roles/verification) - authorization process
 ===================================================================
 Read operation
 1.bringing all data 
-2.bringing data with matching exact source only 
+2.bringing data with matching exact source only - params
+==================================================
+User Data from frontend:
+1.Form html -- ureencoded form 
+2.Json data - json format
+==============================================

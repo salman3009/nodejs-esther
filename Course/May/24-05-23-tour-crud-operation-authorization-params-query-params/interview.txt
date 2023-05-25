@@ -11,3 +11,15 @@ what is authorization process?
 How you will protected the api?
 //we can attached middleware and we can write validatin and verification details inside the middleware.
 =================================================
+How you will do filter operation in backend?
+//We can you url params to get the filter/search input from user.
+//req.params
+================================================
+How to create dynamic api 
+//we can use params to create dynamic api.
+==========================================
+Which api to be return for update
+//we can use put method 
+//user has to share index or unique property in params 
+//update data inside the body.
+===================================

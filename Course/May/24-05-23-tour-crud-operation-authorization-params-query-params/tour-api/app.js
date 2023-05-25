@@ -117,12 +117,37 @@ app.post('/tourcreate', checkLoginStatus, (req, res) => {
 
 app.get('/tourread/:source', (req, res) => {
     console.log("params", req.params.source);
-    let result = list.filter((obj) => {
-        return obj.source === req.params.source;
-    })
+    let result = [];
+    if(req.params.source!='list'){
+       result =  list.filter((obj) => {
+            return obj.source === req.params.source;
+        })
+    }
+    else{
+        result = list;
+    }
+   
     res.status(200).json({
         data: result
     });
+})
+
+//update operation
+app.put('/tourupdate/:index',(req,res,next)=>{
+      let result = list[req.params.index];
+      if(result){
+        console.log(req.body);
+        list[req.params.index]={...result,...req.body};
+        res.status(200).json({
+            message:"successfully updated"
+        })
+      }
+      else{
+        res.status(400).json({
+            status:"failed",
+            message:"please provide proper index"
+        })
+      }
 })
 
 
