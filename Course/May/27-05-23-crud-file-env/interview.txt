@@ -1,5 +1,5 @@
 1.How you will store in environment file?
-//please create .env file 
+//create .env file 
 //use the third party package called dotenv 
 2.What you will store inside the env file?
 //constants and general properties like port,mongodb url,jwt secret keyword we can store inside the env file.
@@ -18,4 +18,13 @@ fs - will work both in sync and async
 8.Difference between findIndex and find method 
 //findIndex will return index value of the particular data 
 //find will return entire object once match is found 
-
+9.Which api to return to delete data
+delete api 
+10.which api to use to update the data 
+put api 
+ //put api will help to whole particular set of property inside the data
+patch api
+//put api will help to update particular set of property inside the data
+11.difference between dynamic api and static api 
+static api - serving html files 
+dynami api - send data depens upon params or query 

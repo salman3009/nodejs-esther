@@ -42,7 +42,7 @@ app.delete('/:id',(req,res)=>{
     })
 })
 
-app.put('/:id',(req,res)=>{
+app.patch('/:id',(req,res)=>{
 
     let id = Number(req.params.id);
 
