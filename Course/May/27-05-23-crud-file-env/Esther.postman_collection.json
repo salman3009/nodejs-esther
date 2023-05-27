@@ -80,6 +80,46 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "delete - file",
+			"request": {
+				"url": "http://localhost:3000/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"source\":\"pune\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "put - file",
+			"request": {
+				"url": "http://localhost:3000/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"payment\":1000\n}"
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
