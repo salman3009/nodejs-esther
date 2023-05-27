@@ -1,2 +1,9 @@
 //How to store constant inside the env file.
 //How to create,update,delete and read from file json data.
+//we can store key and value pair inside the .env file 
+example:
+//sample name
+PORT=3000
+DELL = WERFE@#$%$#^$#%^$#^$%
+MONGODB=http://localhost:3000/port
+====================================================

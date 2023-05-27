@@ -3,3 +3,9 @@
 //use the third party package called dotenv 
 2.What you will store inside the env file?
 //constants and general properties like port,mongodb url,jwt secret keyword we can store inside the env file.
+3.How will you read a data from file 
+//we can inbuilt packgage 'fs' or 'fs/promises' to read file from local system.
+fs/promises - will work in async way 
+fs - will work both in sync and async 
+4.What is template string
+//It is advance syntax in es6 to do manipulation with javascript express and constant string
