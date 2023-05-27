@@ -13,3 +13,5 @@ fs - will work both in sync and async
 //express.json() we can use to parse the json data
 6.what is the method name to delete the data from original array 
 //splce
+7.How to find index inside the array any inbuilt method 
+//findIndex()

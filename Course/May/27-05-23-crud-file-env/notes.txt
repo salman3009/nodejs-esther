@@ -18,4 +18,11 @@ To parse the data inside the express application
 JSON.parse() --> converting json to object 
 JSON.string()--->converting object to json
 ==========================================
+Delete method:
 //Anything property that is coming in url will be always in the string datatype.
+//findIndex() will return -1 if data is not found 
+//For each api you can send only one reponse 
+//splice method will change original array 
+//splice method second parameter always give 1 as value 
+=====================================================
+
