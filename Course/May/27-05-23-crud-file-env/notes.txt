@@ -25,4 +25,10 @@ Delete method:
 //splice method will change original array 
 //splice method second parameter always give 1 as value 
 =====================================================
+update method:
+//we need to two things frontend 
+     1.filter data - params 
+     2.update data  - body
+     
+
 
