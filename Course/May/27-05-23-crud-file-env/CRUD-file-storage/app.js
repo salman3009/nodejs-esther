@@ -24,6 +24,25 @@ app.post('',(req,res)=>{
 
 })
 
+app.delete('/:id',(req,res)=>{
+
+    let id = Number(req.params.id);
+
+    let index = list.findIndex((obj)=>{
+       return obj.id === id;
+    });
+
+    if(index === -1){
+         return res.status(404).send("index not found");
+    }
+
+    list.splice(index,1);
+
+    fs.writeFile(`${__dirname}/data/tour.json`,JSON.stringify(list),()=>{
+        res.status(201).send("<h1>Data is deleted successfully");
+    })
+})
+
 app.listen(process.env.PORT,()=>{
     console.log("server is running xon",process.env.PORT);
 })

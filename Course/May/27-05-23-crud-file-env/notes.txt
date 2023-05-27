@@ -18,3 +18,4 @@ To parse the data inside the express application
 JSON.parse() --> converting json to object 
 JSON.string()--->converting object to json
 ==========================================
+//Anything property that is coming in url will be always in the string datatype.
