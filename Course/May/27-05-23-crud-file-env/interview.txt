@@ -9,3 +9,5 @@ fs/promises - will work in async way
 fs - will work both in sync and async 
 4.What is template string
 //It is advance syntax in es6 to do manipulation with javascript express and constant string
+5.How to parse the json data in backend 
+//express.json() we can use to parse the json data
