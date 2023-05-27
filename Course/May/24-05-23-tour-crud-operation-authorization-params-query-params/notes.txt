@@ -15,3 +15,7 @@ User Data from frontend:
 1.Form html -- ureencoded form 
 2.Json data - json format
 ==============================================
+GET: no body is present 
+POST/PUT: we have body 
+GET/POST/PUT: params is possible in all methods
+=================================================

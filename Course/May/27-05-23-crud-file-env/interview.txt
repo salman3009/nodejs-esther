@@ -1,0 +1,5 @@
+1.How you will store in environment file?
+//please create .env file 
+//use the third party package called dotenv 
+2.What you will store inside the env file?
+//constants and general properties like port,mongodb url,jwt secret keyword we can store inside the env file.
