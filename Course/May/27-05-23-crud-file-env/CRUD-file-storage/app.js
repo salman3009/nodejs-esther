@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const env = require('dotenv');
-const exp = require('constants');
 env.config();
 
 app.use(express.json());

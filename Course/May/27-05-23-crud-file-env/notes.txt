@@ -29,6 +29,5 @@ update method:
 //we need to two things frontend 
      1.filter data - params 
      2.update data  - body
-     
-
+======================================
 
