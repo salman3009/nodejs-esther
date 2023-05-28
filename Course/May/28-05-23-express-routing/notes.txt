@@ -23,3 +23,9 @@ product routes
 adding file path 
 siblings - ./ 
 child from parent to child from another - ../
+============================================
+path to react loginController
+app.js -->api/user 
+routes -->login 
+http://localhost:3000/api/user/login
+==============================================
