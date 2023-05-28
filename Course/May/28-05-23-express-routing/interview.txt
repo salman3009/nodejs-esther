@@ -1,0 +1,4 @@
+How you will implement routing in backend?
+//express router can be used to implement router in backend 
+What is controller?
+//the business logic is written inside the controller.
