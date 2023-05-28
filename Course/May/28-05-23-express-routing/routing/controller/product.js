@@ -1,13 +1,13 @@
-
+const productModel = require('../models/product-model');
 
 module.exports ={
     getListController:async(req,res)=>{
         try{
-
+            let result = productModel.getListModel();
             res.status(200).json({
                 status:'success',
                 message:'fetched successfully',
-                data:[]
+                data:result
             })
 
         }catch(err){
