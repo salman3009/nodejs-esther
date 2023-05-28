@@ -29,3 +29,5 @@ app.js -->api/user
 routes -->login 
 http://localhost:3000/api/user/login
 ==============================================
+to access html file in backend directly 
+express.static()
