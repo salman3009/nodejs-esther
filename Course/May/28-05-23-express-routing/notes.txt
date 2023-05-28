@@ -31,3 +31,9 @@ http://localhost:3000/api/user/login
 ==============================================
 to access html file in backend directly 
 express.static()
+http://localhost:3000/product.html
+http://localhost:3000/index.html
+=============================================
+Models
+//Data will be present here 
+//This data will be access by controller 
