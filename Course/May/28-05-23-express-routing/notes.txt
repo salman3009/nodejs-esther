@@ -19,3 +19,7 @@ product routes
 
 =======================================
 //always create equal number of routes and controller.
+================================================
+adding file path 
+siblings - ./ 
+child from parent to child from another - ../
