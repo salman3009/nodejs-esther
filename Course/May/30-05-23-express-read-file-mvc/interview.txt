@@ -9,7 +9,10 @@ V - view - html
 C - controller - business logic 
 
 app.js-->routes-->middleware--controller--models
+
 3.How middleware will pass from one place to another place 
 next keyword will help to pass the data from one position another position.
 
+4.How middleware will pass the data from one postion to another position?
+req object
 ===================================================

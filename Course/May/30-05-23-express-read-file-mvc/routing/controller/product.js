@@ -21,13 +21,11 @@ module.exports ={
   postListController:async(req,res)=>{
      try{
         console.log("post list controller");
-       let result = productModel.getListModel();
-        console.log(result);
         let product = req.body;
         console.log(product);
-        product.id = result.length+1;
-        result.push(product);
-        let proc = await productModel.postListModel(result);
+        product.id = req.id;
+        req.list.push(product);
+        let proc = await productModel.postListModel(req.list);
         console.log(proc);
         res.status(201).json({
             status:"success",
