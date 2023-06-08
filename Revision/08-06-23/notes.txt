@@ -1,0 +1,6 @@
+DOM - Document Object Model 
+//It is created behind the scence 
+//Mainly to interact with javascript 
+//Default document(window) object is attached
+    example: alert 
+             getElementById()
