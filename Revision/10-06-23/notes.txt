@@ -85,4 +85,14 @@ Scope chain
 1.Global Scope 
 2.Function Scope 
 3.Block Scope - (es6)
+
+
+this keyword:
+outside the function - this will refer to window object
+Method - this will refer to current object 
+simple function - this will to undefined 
+arrow function - parent function - window object 
+
+
 ================================================
+
