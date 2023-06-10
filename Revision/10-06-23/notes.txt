@@ -68,10 +68,21 @@ Javascript Engine
 
 Exection Context 
 1.variable environment 
+   let,const,var ,functions,arguments
 2.scope chain 
+
 3.this keyword 
+//normal function this keyword will be created
+//arrow function this keyword will not be created instead it will be borrow from parent function.
+
 
 Difference normal function arrow function 
 
 Regex
+
+
+Scope chain 
+1.Global Scope 
+2.Function Scope 
+3.Block Scope - (es6)
 ================================================
