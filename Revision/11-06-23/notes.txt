@@ -1,0 +1,34 @@
+this keyword:
+outside the function - this will refer to window object
+Method - this will refer to current object 
+simple function - this will to undefined 
+arrow function - it will not have own this keyword it will borrow from surrounding function
+================================================
+Hoisting:
+In javascript some types of variables is accessible in the code before execution.
+example 
+addition();
+function addition(){
+
+}
+Global execution context will be created before execution phase and here you will have 
+all varibles declares and function entry point 
+Hositing:
+1.normal function declaration 
+2.var keyword 
+3.let and const hositing not possible 
+4.function expression with var is possible and with let & const is not possible.
+=====================================================
+Temporal Dead zone 
+1.Accessing any variable before declaration is a bad practice and should be avoided.
+example:
+<!-- <script>
+    console.log(firstName);
+    let firstName = "akash";
+ </script> -->
+
+ <!-- <script>
+    console.log(firstName);
+    const firstName = "akash";
+ </script> -->
+ ============================================================
