@@ -1,8 +1,11 @@
 this keyword:
+this means object
 outside the function - this will refer to window object
 Method - this will refer to current object 
 simple function - this will to undefined 
 arrow function - it will not have own this keyword it will borrow from surrounding function
+Global execution context is the first function that will be executed
+function is also object in javascript
 ================================================
 Hoisting:
 In javascript some types of variables is accessible in the code before execution.
@@ -32,3 +35,17 @@ example:
     const firstName = "akash";
  </script> -->
  ============================================================
+ Closures:
+ //A Closure is a feature of javascript that allows inner functions to access the outer scope of a function.
+ <script>
+    function display(){
+        let firstName = "akash";
+          function inner(){
+               return firstName;
+          }
+          return inner;
+    }
+    let result = display();
+    console.log(result());
+</script>
+===========================================================
