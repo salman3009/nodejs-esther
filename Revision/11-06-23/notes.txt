@@ -49,3 +49,15 @@ example:
     console.log(result());
 </script>
 ===========================================================
+ES6 
+1.let/const 
+//array,object,function please use const keyword 
+2.arrow function 
+ //declare with const keyword
+3.template string 
+//it will preserve the space
+4.rest/spread operator 
+spread - spread the array or object
+5.destructing 
+6.class/inheritance/static 
+============================================================
