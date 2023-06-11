@@ -58,6 +58,11 @@ ES6
 //it will preserve the space
 4.rest/spread operator 
 spread - spread the array or object
+rest - combine individual into array or object
 5.destructing 
+//converting array or object into individual variables
 6.class/inheritance/static 
+class - blueprint of object 
+constuctor - it is use to initialize the data 
+
 ============================================================
