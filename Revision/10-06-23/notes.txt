@@ -64,8 +64,8 @@ Javascript Engine
      DOM,timers,fetch api
 5.heap 
   //array and object kept inside this memory
-5.Execution context 
-
+6.Execution context 
+===========================================
 Exection Context 
 1.variable environment 
    let,const,var ,functions,arguments
@@ -74,25 +74,16 @@ Exection Context
 3.this keyword 
 //normal function this keyword will be created
 //arrow function this keyword will not be created instead it will be borrow from parent function.
-
-
-Difference normal function arrow function 
-
-Regex
-
-
+=========================================================
 Scope chain 
 1.Global Scope 
 2.Function Scope 
 3.Block Scope - (es6)
-
-
+=======================================================
 this keyword:
 outside the function - this will refer to window object
 Method - this will refer to current object 
 simple function - this will to undefined 
-arrow function - parent function - window object 
-
-
+arrow function - it will not have own this keyword it will borrow from surrounding function
 ================================================
 
