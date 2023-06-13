@@ -6,6 +6,7 @@ const connect = new mongoClient(uri);
 //banking database
 const db = connect.db('banking');
 
+//keyword: MongoClient,db,collection,insertOne
 
 async function insert(){
    try{
@@ -14,8 +15,6 @@ async function insert(){
        //all db operation will return promise
        let result = await db.collection('customer').insertOne({
         fullName:'prashant raj',
-        age:23,
-        status:23,
         hobbies:['cricket','music'],
         address:{
             primary:'Noida',
