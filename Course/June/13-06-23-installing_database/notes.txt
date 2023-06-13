@@ -67,6 +67,6 @@ Inside the MongodbCompass
 5.How to delete the data 
 6.HOw to read the data 
 ==========================================
-Frontend ---- backend --Nodejs--Expressjs---Mongodb 
-Nodejs-expressjs-mongodb 
+Frontend ---- backend --Nodejs----Mongodb 
+Nodejs-mongodb 
 =======================================
