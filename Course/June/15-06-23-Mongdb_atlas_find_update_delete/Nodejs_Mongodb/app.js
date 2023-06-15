@@ -6,6 +6,8 @@ const connect = new mongoClient(uri);
 //banking database
 const db = connect.db('banking');
 
+const objectId = require('mongodb').ObjectId;
+
 //keyword: MongoClient,db,collection,insertOne
 
 async function insert(){
@@ -52,4 +54,18 @@ async function findQuery(){
 
 }
 
-findQuery();
+//findQuery();
+
+async function findById(){
+    try{
+        let query = {_id: new objectId('6488a68f123e389302043d25')};
+        let result = await db.collection('customer').find(query).toArray();
+        console.log("find",result);
+
+    }catch(err){
+        console.log(err);
+    }
+
+}
+
+findById();
