@@ -4,7 +4,8 @@ const Customer = require('./models/customer');
 
 mongoose.connect(uri).then(()=>{
     console.log("database is connected");
-    createOperation();
+    // createOperation();
+    findOperation();
 }).catch((err)=>{
     console.log("connection failed",err)
 })
@@ -26,4 +27,14 @@ const createOperation=async()=>{
     }catch(err){
         console.log(err);
     }
+}
+
+const findOperation= async ()=>{
+       try{
+        let result = await Customer.find();
+        console.log(result);
+        //final data in array format
+       }catch(err){
+        console.log(err)
+       }
 }
