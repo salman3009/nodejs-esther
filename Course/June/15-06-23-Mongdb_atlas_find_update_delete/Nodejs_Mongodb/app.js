@@ -6,7 +6,7 @@ const connect = new mongoClient(uri);
 //banking database
 const db = connect.db('banking');
 
-const objectId = require('mongodb').ObjectId;
+const clusterId = require('mongodb').ObjectId;
 
 //keyword: MongoClient,db,collection,insertOne
 
@@ -58,7 +58,7 @@ async function findQuery(){
 
 async function findById(){
     try{
-        let query = {_id: new objectId('6488a36671e91b8fea00777d')};
+        let query = {_id: new clusterId('6488a36671e91b8fea00777d')};
         let result = await db.collection('customer').find(query).toArray();
         console.log("find",result);
 
@@ -68,11 +68,11 @@ async function findById(){
 
 }
 
-//findById();
+findById();
 
 async function deleteById(){
     try{
-      let query = {_id: new objectId('6488a68f123e389302043d25')};
+      let query = {_id: new clusterId('6488a68f123e389302043d25')};
       let result = await db.collection('customer').deleteOne(query);
       console.log(result);
     }catch(err){
@@ -84,7 +84,7 @@ async function deleteById(){
 async function update(){
     try{
       let update ={$set:{status:true}};
-      let filter ={_id: new objectId('6488a36671e91b8fea00777d')};
+      let filter ={_id: new clusterId('6488a36671e91b8fea00777d')};
       let result = await db.collection('customer').updateOne(filter,update);
       console.log(result);
 
@@ -93,4 +93,4 @@ async function update(){
     }
 
 }
-update();
+//update();

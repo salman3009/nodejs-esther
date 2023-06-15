@@ -30,3 +30,4 @@ Mongoose
 //Schema creation is done 
 //validation we can able to do (required,min,max,pattern,email)
 ==================================================================
+All mongoose operation will return promise we need to then() and catch()
