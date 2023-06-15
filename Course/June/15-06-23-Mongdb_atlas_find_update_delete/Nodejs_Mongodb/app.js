@@ -58,7 +58,7 @@ async function findQuery(){
 
 async function findById(){
     try{
-        let query = {_id: new objectId('6488a68f123e389302043d25')};
+        let query = {_id: new objectId('6488a36671e91b8fea00777d')};
         let result = await db.collection('customer').find(query).toArray();
         console.log("find",result);
 
@@ -68,7 +68,7 @@ async function findById(){
 
 }
 
- //findById();
+//findById();
 
 async function deleteById(){
     try{
@@ -79,4 +79,18 @@ async function deleteById(){
         console.log(err);
     }
 }
-deleteById();
+// deleteById();
+
+async function update(){
+    try{
+      let update ={$set:{status:true}};
+      let filter ={_id: new objectId('6488a36671e91b8fea00777d')};
+      let result = await db.collection('customer').updateOne(filter,update);
+      console.log(result);
+
+    }catch(err){
+        console.log(err);
+    }
+
+}
+update();
