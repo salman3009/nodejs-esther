@@ -31,3 +31,6 @@ Mongoose
 //validation we can able to do (required,min,max,pattern,email)
 ==================================================================
 All mongoose operation will return promise we need to then() and catch()
+any collection created from mongoose default it will add s in the end of the string 
+example:customer--->customers 
+====================================================
