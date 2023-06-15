@@ -68,4 +68,15 @@ async function findById(){
 
 }
 
-findById();
+ //findById();
+
+async function deleteById(){
+    try{
+      let query = {_id: new objectId('6488a68f123e389302043d25')};
+      let result = await db.collection('customer').deleteOne(query);
+      console.log(result);
+    }catch(err){
+        console.log(err);
+    }
+}
+deleteById();
