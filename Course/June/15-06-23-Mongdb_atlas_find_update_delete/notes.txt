@@ -1,0 +1,12 @@
+Mongodb Atlas setup:
+//Storing data in cloud database
+Setup:
+1.Login 
+2.create cluster 
+3.network access - entry 0.0.0./0
+4.database access - username/password 
+5.database --> connect -->vscode - url copy 
+6.past it and <password> with your password 
+7.run the application 
+8.database -->browse collection-->database-->collections 
+===================================================

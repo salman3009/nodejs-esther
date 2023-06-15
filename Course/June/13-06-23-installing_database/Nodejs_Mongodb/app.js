@@ -14,7 +14,7 @@ async function insert(){
        //insertOne() - method to insert the data 
        //all db operation will return promise
        let result = await db.collection('customer').insertOne({
-        fullName:'prashant raj',
+        fullName:'durgesh',
         hobbies:['cricket','music'],
         address:{
             primary:'Noida',
@@ -26,4 +26,5 @@ async function insert(){
     console.log(err);
    }
 }
-insert();
+ insert();
+
