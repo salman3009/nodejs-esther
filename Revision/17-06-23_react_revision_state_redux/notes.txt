@@ -45,3 +45,26 @@ useReducer
 //If there is change in this state ui will get render again 
 //It consists of two parameter one is current state and another one is updated state.
 //YOu will have multiple actions to update the state.
+=====================================================
+Props--> property -- Passing data from one component to another component 
+=================================================
+App.js -- Display---Sub---Mini 
+===============================================
+UseContext 
+//To avoid chaining of props 
+//We can pass the state data to any of the component in component tree.
+//provider and consumer 
+//to improve the performance.
+=============================
+export const FullName = "suresh" 
+import {fullname} from './file';
+
+export default function App(){
+
+}
+import App from './file';
+
+Single file 
+//you can have multiple export statement 
+//but only one default is allowed
+====================================
