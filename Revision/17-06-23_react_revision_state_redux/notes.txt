@@ -1,0 +1,38 @@
+What is state?
+//some set of data 
+//If you want render latest UI we need to update in state.
+Example:
+function Details(){
+    return (<div>
+      <h1></h1>
+    <div>)
+}
+Types of component 
+1.class component 
+2.functional component 
+
+useState,UseReducer,useContext - hooks
+1.useState
+2.UseReducer
+3.useContext 
+4.Redux
+===========================================
+creating new project:
+below to create react project 
+npx create-react-app sample-state
+
+below to create nextjs project
+npx create-react-app@latest sample-state
+Points:
+serverside rendering
+backend api
+dynamic routing directly
+css setup
+image optimization
+typescript support
+==========================================
+start point - index.js 
+first component - app
+{} - javascript expression 
+=================================
+useState --> async way 
