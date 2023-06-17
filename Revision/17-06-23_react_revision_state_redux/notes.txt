@@ -9,7 +9,7 @@ function Details(){
 }
 Types of component 
 1.class component 
-2.functional component 
+2.functional component - latest
 
 useState,UseReducer,useContext - hooks
 1.useState
@@ -35,4 +35,13 @@ start point - index.js
 first component - app
 {} - javascript expression 
 =================================
-useState --> async way 
+useState
+//async way
+//If there is change in this state ui will get render again 
+//It consists of two parameter one is current state and another one is updated state.
+==========================================================
+useReducer 
+//async way 
+//If there is change in this state ui will get render again 
+//It consists of two parameter one is current state and another one is updated state.
+//YOu will have multiple actions to update the state.
