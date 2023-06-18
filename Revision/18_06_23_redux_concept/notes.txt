@@ -12,4 +12,4 @@ createSlice:
 5.extraReducers - fullfilled,pending,rejected
 =================================================
 Flow 
-store.js----->index.js(provider)
+counterSlice--->store.js----->index.js(provider)
