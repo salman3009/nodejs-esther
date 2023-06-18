@@ -1,12 +1,24 @@
 import { useSelector,useDispatch } from 'react-redux';
 import './App.css';
-import { increment,decrement,amount } from './counterSlice';
+import { increment,decrement,amount,fetchDetails } from './counterSlice';
+import { useEffect } from 'react';
 
 function App() {
     
+
+  useEffect(()=>{
+       dispatch(fetchDetails());
+  },[])
+
+
   //const value = useSelector((state)=>state.counter.value);
-  const {value,email} = useSelector((state)=>state.counter);
+  const {value,email,status} = useSelector((state)=>state.counter);
   const dispatch = useDispatch();
+
+  if(status == 'pending'){
+    return <div>Loading.....</div>
+  }
+
 
   const onChangeHandler=(event)=>{
     dispatch(amount(event.target.value));
