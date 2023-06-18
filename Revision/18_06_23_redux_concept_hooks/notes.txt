@@ -26,4 +26,13 @@ Flow
 counterSlice--->store.js----->index.js(provider)--App
    |------------------------------------------------|
 
-=========================================================   
+=========================================================  
+hooks:
+useEffect
+
+1.Initial rendering - backend
+
+2.update state -- backend
+
+3.unmount state
+=============================
