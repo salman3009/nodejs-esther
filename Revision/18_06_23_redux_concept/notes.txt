@@ -14,7 +14,13 @@ createSlice:
 useSelector 
 //to access current state
 
+useDispatch 
+//To trigger action 
 
+createAsyncThunk 
+//To trigger api in async away 
+//It consists of three state:pending,fullfilled,rejected 
+//By using extraReducers inside the slice.
 =================================================
 Flow 
 counterSlice--->store.js----->index.js(provider)--App
