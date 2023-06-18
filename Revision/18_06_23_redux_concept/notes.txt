@@ -10,6 +10,14 @@ createSlice:
 3.reducers - multiple action 
 4.asyncthunk - async api call 
 5.extraReducers - fullfilled,pending,rejected
+
+useSelector 
+//to access current state
+
+
 =================================================
 Flow 
-counterSlice--->store.js----->index.js(provider)
+counterSlice--->store.js----->index.js(provider)--App
+   |------------------------------------------------|
+
+=========================================================   
