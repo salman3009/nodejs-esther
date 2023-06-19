@@ -28,7 +28,7 @@ const UseMemo=()=>{
        <br/>
        <button onClick={()=>setAge(getAge+1)}>Increase the Age</button>
        <br/>
-       <div>{Even?"event number":"old number"}</div>
+       <div>{Even?"even number":"old number"}</div>
    </div>)
 }
 export default UseMemo;

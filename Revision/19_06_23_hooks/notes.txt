@@ -2,7 +2,9 @@ How to improve the performance in reactjs
 1.useContext 
  //To avoid chaining of props
 2.useMemo
- // memoization within the component
+ // memoization for particular function
 3.useCallback
+//memoization for the entire component
 4.custom hooks 
+
 5.useRef
