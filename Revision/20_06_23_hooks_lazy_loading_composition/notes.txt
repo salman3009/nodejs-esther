@@ -2,7 +2,11 @@ Performance Improvement:
 1.useRef:
 //disabled,value,focus --- useRef to avoid interacting with real DOM.
 Lazy loading 
+To integrate routing:
+1.react-router-dom
+//To load the component later once we hit the particular url in the browser.
 React suspense
+
 interceptor 
 React composition 
 class component 

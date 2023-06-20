@@ -1,20 +1,20 @@
-import {useEffect,useRef} from 'react';
+// import Product from "./Product";
+// import Artist from "./Artist";
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import {lazy} from 'react';
+const Product = lazy(()=>import('./Product'));
+const Artist = lazy(()=>import('./Artist'));
 function App() {
-
-  const inputRef = useRef(null);
-
-  
-   useEffect(()=>{
-    console.log(inputRef.current.name);
-    console.log(inputRef.current.id);
-    inputRef.current.value="akash";
-    inputRef.current.focus();
-    inputRef.current.disabled = true;
-   },[])
 
   return (
     <div className="App">
-      <input type='text' name="fullName" id="name" ref={inputRef}/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/product' element={<Product/>}/>
+          <Route path='/artist' element={<Artist/>}/>
+        </Routes>
+      </BrowserRouter>
+     
     </div>
   );
 }
