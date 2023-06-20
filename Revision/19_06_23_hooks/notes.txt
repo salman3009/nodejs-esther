@@ -6,5 +6,6 @@ How to improve the performance in reactjs
 3.useCallback
 //memoization for the entire component
 4.custom hooks 
-
-5.useRef
+//reusable code function we can write it 
+example:
+ //get api call 

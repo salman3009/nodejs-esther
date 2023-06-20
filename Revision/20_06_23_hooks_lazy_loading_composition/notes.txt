@@ -1,0 +1,10 @@
+Performance Improvement:
+1.useRef:
+//disabled,value,focus --- useRef to avoid interacting with real DOM.
+Lazy loading 
+React suspense
+interceptor 
+React composition 
+class component 
+life cycle in class component 
+error boundary 
