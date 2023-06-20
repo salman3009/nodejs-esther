@@ -18,6 +18,9 @@ interceptor
 React composition 
 //component composition is the name for passing components as props to other components
 class component 
+//During initial development of react it is started with class component 
+//State is available only at class component before react 16.8 
+
 HOC
 life cycle in class component 
 error boundary 
