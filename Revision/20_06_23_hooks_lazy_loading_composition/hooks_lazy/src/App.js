@@ -1,36 +1,16 @@
 import React from 'react';
-
-class Sub extends React.Component{
-  
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return (<div>
-      Hello Sub - {this.props.getDisplay}
-    </div>)
-  }
-}
-
-
-
+import EnhancedComponent from './EnhancedComponent';
 
 class App extends React.Component{
 
   constructor(props){
-    super(props)
-    this.state={fullName:'akash'}
+    super(props);
   }
   
   render(){
-    return (<div>
-      Hello Newton school - {this.state.fullName}
-      <input type="text" onChange={(event)=>this.setState({fullName:event.target.value})}/>
-      <Sub getDisplay={'working'}/>
-    </div>)
+    const {address} = this.props;
+    return <div>{address}</div>
   }
 }
 
-
-
-export default App;
+export default EnhancedComponent(App);
