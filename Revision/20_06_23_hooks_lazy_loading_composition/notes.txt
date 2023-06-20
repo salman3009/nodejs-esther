@@ -6,7 +6,7 @@ To integrate routing:
 1.react-router-dom
 //To load the component later once we hit the particular url in the browser.
 React suspense
-
+//Whenever loading is happening for lazy loading component it helps to provide spinner
 interceptor 
 React composition 
 class component 
