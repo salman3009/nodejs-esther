@@ -13,8 +13,11 @@ API call
 //It will take care of parsing the data from json to javascript and javascript to json 
 //It will support other concepts like common headers and interceptors.
 interceptor
- 
+ //It will act like middleware between frontend and backend 
+ //It helps to attach token in headers for all the api call 
 React composition 
+//
+
 class component 
 life cycle in class component 
 error boundary 
