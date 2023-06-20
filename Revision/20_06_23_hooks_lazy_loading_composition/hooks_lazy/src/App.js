@@ -1,30 +1,22 @@
-import axios from 'axios';
-import {useEffect,useState} from 'react';
+import './App.css';
+import Product from './Product';
+import Artist from './Artist';
+
+function SplitPanel(props){
+    return (<div className="main-pane">
+      <div className="main-pane-left">
+       {props.left}
+      </div>
+      <div className="main-pane-right"> 
+      {props.right}
+      </div>
+    </div>) 
+}
+
 
 function App() {
-
-  const [getTodo,setTodo] = useState([]);
-  useEffect(()=>{
-     axios.get('https://jsonplaceholder.typicode.com/todos/').then((result)=>{
-          console.log(result.data);
-          setTodo(result.data);
-     }).catch((error)=>{
-        console.log(error);
-     })
-  },[])
-
   return (
-    <div className="App">
-     {
-      getTodo && getTodo.map((obj,index)=>{
-           return (<div key={index}>
-               {obj.title}
-           </div>)
-         
-      })
-     }
-     
-    </div>
+   <SplitPanel left={<Product/>} right={<Artist/>}/>
   );
 }
 

@@ -16,8 +16,8 @@ interceptor
  //It will act like middleware between frontend and backend 
  //It helps to attach token in headers for all the api call 
 React composition 
-//
-
+//component composition is the name for passing components as props to other components
 class component 
+HOC
 life cycle in class component 
 error boundary 
