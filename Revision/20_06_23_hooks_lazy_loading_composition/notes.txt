@@ -7,7 +7,13 @@ To integrate routing:
 //To load the component later once we hit the particular url in the browser.
 React suspense
 //Whenever loading is happening for lazy loading component it helps to provide spinner
-interceptor 
+API call
+//third party package called axios for api call
+//It support all methods like get,post,patch,delete 
+//It will take care of parsing the data from json to javascript and javascript to json 
+//It will support other concepts like common headers and interceptors.
+interceptor
+ 
 React composition 
 class component 
 life cycle in class component 

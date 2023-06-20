@@ -1,21 +1,28 @@
-// import Product from "./Product";
-// import Artist from "./Artist";
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import {lazy,Suspense} from 'react';
-const Product = lazy(()=>import('./Product'));
-const Artist = lazy(()=>import('./Artist'));
+import axios from 'axios';
+import {useEffect,useState} from 'react';
+
 function App() {
+
+  const [getTodo,setTodo] = useState([]);
+  useEffect(()=>{
+     axios.get('https://jsonplaceholder.typicode.com/todos/').then((result)=>{
+          console.log(result.data);
+          setTodo(result.data);
+     }).catch((error)=>{
+        console.log(error);
+     })
+  },[])
 
   return (
     <div className="App">
-      <BrowserRouter>
-      <Suspense fallback={<h1>Still loading.....</h1>}>
-      <Routes>
-          <Route path='/product' element={<Product/>}/>
-          <Route path='/artist' element={<Artist/>}/>
-        </Routes>
-      </Suspense>
-      </BrowserRouter>
+     {
+      getTodo && getTodo.map((obj,index)=>{
+           return (<div key={index}>
+               {obj.title}
+           </div>)
+         
+      })
+     }
      
     </div>
   );
