@@ -12,12 +12,20 @@ mongoose.connect(uri).then(()=>{
 
 const findOperation= async ()=>{
        try{
-        
+
         //$eq
         //let result = await Customer.find({fullName:{$eq:'suresh'}});
 
         //$ne
-        let result = await Customer.find({fullName:{$ne:'suresh'}});
+        // let result = await Customer.find({fullName:{$ne:'suresh'}});
+        // console.log(result);
+
+        //gt 
+        // let result = await Customer.find({age:{$gte:45}});
+        // console.log(result);
+
+        //lt
+        let result = await Customer.find({age:{$lt:40}});
         console.log(result);
       
        }catch(err){
