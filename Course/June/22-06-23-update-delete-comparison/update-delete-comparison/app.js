@@ -4,34 +4,24 @@ const Customer = require('./models/customer');
 
 mongoose.connect(uri).then(()=>{
     console.log("database is connected");
-    // createOperation();
+    //createOperation();
     findOperation();
 }).catch((err)=>{
     console.log("connection failed",err)
 })
 
-const createOperation=async()=>{
-    try{
 
-        const customerPost = new Customer({
-            fullName:"akash",
-            age:45,
-            status:false,
-            hobbies:['football','music'],
-            salary:15000
-        })
-
-        const result = await customerPost.save();
-        console.log(result);
-
-    }catch(err){
-        console.log(err);
-    }
-}
 
 const findOperation= async ()=>{
        try{
-        let result = await Customer.find();
+        // let result = await Customer.find();
+
+        //filtering with _id 
+        // let result = await Customer.find({_id:'64946b6fcc9dd5dccce30feb'});
+
+        //query with other property
+        let result = await Customer.find({fullName:'suresh',age:65});
+
         console.log(result);
         //final data in array format
        }catch(err){
