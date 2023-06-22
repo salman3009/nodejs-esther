@@ -1,0 +1,22 @@
+Operation CRUD:
+1.save()
+2.find()
+3.findOneAndUpdate
+4.deleteOne
+
+How to count the total number of documents:
+count()
+How we can do pagination:
+skip()
+limit()
+=====================================================
+List of Comparison Operator:
+1.$eq - equality operator - [string]
+2.$ne - not equality operator - [string]
+3.$gt - greater than - [number]
+4.$gte - greater than equal to  -  [number]
+5.$lt - less than -  [number]
+6.$lte  - less than equal to -  [number]
+7.$in - [array]
+8.$nin - not in - [array]
+========================================
