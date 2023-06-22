@@ -20,12 +20,19 @@ const findOperation= async ()=>{
         // let result = await Customer.find({fullName:{$ne:'suresh'}});
         // console.log(result);
 
-        //gt 
+        //gt or gte
         // let result = await Customer.find({age:{$gte:45}});
         // console.log(result);
 
-        //lt
-        let result = await Customer.find({age:{$lt:40}});
+        //lt or lte
+        // let result = await Customer.find({age:{$lt:40}});
+        // console.log(result);
+
+        //$in
+        //let result = await Customer.find({hobbies:{$in:['music']}});
+
+         //$nin
+         let result = await Customer.find({hobbies:{$nin:['music']}});
         console.log(result);
       
        }catch(err){

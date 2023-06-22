@@ -16,7 +16,7 @@ const createOperation=async()=>{
     let result = new Customer({
       fullName:"sathis",
       age:33,
-      hobbies:['football,cricket'],
+      hobbies:['football','cricket'],
       salary:44000
     })
     let finalResult = await result.save();
