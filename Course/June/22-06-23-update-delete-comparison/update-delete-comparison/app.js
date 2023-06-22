@@ -5,7 +5,8 @@ const Customer = require('./models/customer');
 mongoose.connect(uri).then(()=>{
     console.log("database is connected");
     //createOperation();
-    findOperation();
+    //findOperation();
+    updateOperation()
 }).catch((err)=>{
     console.log("connection failed",err)
 })
@@ -14,17 +15,34 @@ mongoose.connect(uri).then(()=>{
 
 const findOperation= async ()=>{
        try{
-        // let result = await Customer.find();
+        let result = await Customer.find();
 
         //filtering with _id 
         // let result = await Customer.find({_id:'64946b6fcc9dd5dccce30feb'});
 
         //query with other property
-        let result = await Customer.find({fullName:'suresh',age:65});
+       // let result = await Customer.find({fullName:'suresh',age:65});
 
         console.log(result);
         //final data in array format
        }catch(err){
         console.log(err)
        }
+}
+
+const updateOperation=async()=>{
+      try{
+         let filter={_id:'64946b6fcc9dd5dccce30feb'};
+         let update ={age:40};
+
+        //  let result = await Customer.findOneAndUpdate(filter,update);
+        //  console.log(result);
+
+        //It is returning the document new one
+        let result = await Customer.findOneAndUpdate(filter,update,{new:true});
+         console.log(result);
+
+      }catch(err){
+        console.log(err);
+      }
 }
