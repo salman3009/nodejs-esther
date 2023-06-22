@@ -6,10 +6,29 @@ mongoose.connect(uri).then(()=>{
     console.log("database is connected");
     //createOperation();
     //findOperation();
-    updateOperation()
+    //updateOperation()
+   // deleteOperation();
+   countOperation();
 }).catch((err)=>{
     console.log("connection failed",err)
 })
+
+
+const createOperation=async()=>{
+  try{
+    let result = new Customer({
+      fullName:"sathis",
+      age:33,
+      hobbies:['football,cricket'],
+      salary:44000
+    })
+    let finalResult = await result.save();
+    console.log(finalResult);
+
+  }catch(err){
+    console.log(err);
+  }
+}
 
 
 
@@ -45,4 +64,23 @@ const updateOperation=async()=>{
       }catch(err){
         console.log(err);
       }
+}
+
+const deleteOperation = async()=>{
+   try{
+    let filter = {_id:'649471891b9e1fbcc02177ef'};
+    let result = await Customer.deleteOne(filter);
+    console.log(result);
+   }catch(err){
+    console.log(err);
+   }
+}
+
+const countOperation = async()=>{
+  try{
+     let result = await Customer.find().count();
+     console.log(result);
+  }catch(err){
+    console.log(err);
+  }
 }
