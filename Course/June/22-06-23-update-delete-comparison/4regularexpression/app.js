@@ -34,8 +34,15 @@ const findOperation = async () => {
         //    console.log(result);
 
         //scenario: name should start with sathis and end with sathish - ^sathish$
-           let result = await Customer.find({fullName:{$regex:/^sathis$/i}});
-            console.log(result);
+        //    let result = await Customer.find({fullName:{$regex:/^sathis$/i}});
+        //     console.log(result);
+       
+        // //Adding dynamic regular expression 
+        // let search = 'sathis'; //frontend data
+        // let regex = new RegExp(`^${search}$`,"i");
+        // let result = await Customer.find({fullName:{$regex:regex}});
+        // console.log(result);
+
 
 
 
