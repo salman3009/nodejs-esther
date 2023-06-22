@@ -56,3 +56,8 @@ raj sathis
 sathis 
 SATHIS 
 
+==================================================================
+Dynamic regular expression:
+let search = 'sathis'; //frontend data
+let regex = new RegExp(`^${search}$`,"i");
+==============================================================
