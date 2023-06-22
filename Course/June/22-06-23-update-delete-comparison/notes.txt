@@ -20,3 +20,8 @@ List of Comparison Operator:
 7.$in - [array]
 8.$nin - not in - [array]
 ========================================
+List of Logical operator:
+1.$and - everything should match
+2.$nor - opposite of and 
+3.$or - any one match 
+====================================
