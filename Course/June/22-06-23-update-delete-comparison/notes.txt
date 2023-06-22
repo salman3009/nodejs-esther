@@ -25,3 +25,9 @@ List of Logical operator:
 2.$nor - opposite of and 
 3.$or - any one match 
 ====================================
+regular expression:
+1.i - case insensitive 
+2.^ - start symbol 
+3.$ - end symbol 
+4.$elemMatch 
+===================================
