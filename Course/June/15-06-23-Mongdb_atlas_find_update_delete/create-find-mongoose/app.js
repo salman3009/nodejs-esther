@@ -14,7 +14,7 @@ mongoose.connect(uri).then(()=>{
 const createOperation=async()=>{
   try{
     let result = new Customer({
-      fullName:"SATHIS",
+      fullName:"raj sathis",
       age:33,
       hobbies:['football','cricket'],
       salary:44000

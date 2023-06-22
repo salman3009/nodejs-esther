@@ -31,3 +31,28 @@ regular expression:
 3.$ - end symbol 
 4.$elemMatch 
 ===================================
+sathis 
+SATHIS 
+raj sathis 
+sathis kumar 
+
+1.let result = await Customer.find({fullName:{$regex:/sathis/i}});
+sathis 
+SATHIS 
+raj sathis 
+sathis kumar
+
+2.let result = await Customer.find({fullName:{$regex:/^sathis/i}});
+sathis 
+SATHIS 
+sathis kumar
+
+3.let result = await Customer.find({fullName:{$regex:/sathis$/i}});
+sathis 
+SATHIS 
+raj sathis 
+
+4.let result = await Customer.find({fullName:{$regex:/^sathis$/i}});
+sathis 
+SATHIS 
+
