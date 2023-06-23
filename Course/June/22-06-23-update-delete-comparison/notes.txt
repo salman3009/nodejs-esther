@@ -1,8 +1,8 @@
 Operation CRUD:
 1.save()
 2.find()
-3.findOneAndUpdate
-4.deleteOne
+3.findOneAndUpdate()
+4.deleteOne()
 
 How to count the total number of documents:
 count()
