@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const userRoute = require('./routes/user');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 mongoose.connect('mongodb://127.0.0.1:27017/amazon').then(()=>{
     console.log("connected");
@@ -10,6 +11,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/amazon').then(()=>{
 })
 
 app.use(express.json());
+app.use(cors());
 app.use('/api/user',userRoute);
 
 
