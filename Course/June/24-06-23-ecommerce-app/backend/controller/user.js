@@ -34,7 +34,8 @@ const loginUser = async (req,res)=>{
         }
          res.status(200).json({
             message:"successful",
-            token:'xyz123'
+            token:'xyz123',
+            email:emailResult.email
          })
     }catch(err){
         res.status(500).json({
