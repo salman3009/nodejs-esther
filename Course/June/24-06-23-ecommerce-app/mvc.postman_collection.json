@@ -1,0 +1,126 @@
+{
+	"variables": [],
+	"info": {
+		"name": "mvc",
+		"_postman_id": "cdde59d8-7801-dbf1-ebac-2b6f09134ef6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"url": "http://localhost:3000/api/user/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"suresh\",\n    \"email\": \"suresh@gmail.com\",\n    \"password\":\"12345\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"url": "http://localhost:3000/api/user/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"suresh@gmail.com\",\n    \"password\":\"12345\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "createEmployee",
+			"request": {
+				"url": "http://localhost:3000/api/employee/createEmployee",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cmVzaEBnbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VycyJdLCJpYXQiOjE2ODY0NjYxNDEsImV4cCI6MTY4NjQ2OTc0MX0.2BxB0PBhcHOb-q9_NObkpAXRZ9snft2qldmQR8cwj4s",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"amol\",\n    \"age\":\"45\",\n    \"salary\":45000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getEmployee",
+			"request": {
+				"url": "http://localhost:3000/api/employee/employeeList/fetch",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cmVzaEBnbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VycyJdLCJpYXQiOjE2ODY0NjYxNDEsImV4cCI6MTY4NjQ2OTc0MX0.2BxB0PBhcHOb-q9_NObkpAXRZ9snft2qldmQR8cwj4s",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"amol\",\n    \"age\":\"45\",\n    \"salary\":45000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmployee",
+			"request": {
+				"url": "http://localhost:3000/api/employee/updateName/amol",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cmVzaEBnbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VycyJdLCJpYXQiOjE2ODY0NjYzOTAsImV4cCI6MTY4NjQ2OTk5MH0.KPWX2BC5syOTvgsog6kFNgRwVTwTd1hILw28Qslv5us",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"age\":\"50\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
