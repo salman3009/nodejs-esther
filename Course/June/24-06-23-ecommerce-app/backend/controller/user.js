@@ -20,4 +20,27 @@ const createUser= async(req,res)=>{
    }
 }
 
+const loginUser = async (req,res)=>{
+    try{
+        let emailResult = await User.findOne({email:req.body.email});
+        if(!emailResult){
+            res.status(400).json({message:"Email is not found"});
+            return;
+        }
+        console.log(emailResult.password);
+        if(emailResult.password != req.body.password){
+            res.status(400).json({message:"password not match"});
+            return;
+        }
+         res.status(200).json({
+            message:"successful",
+            token:'xyz123'
+         })
+    }catch(err){
+        res.status(500).json({
+            message:err.message?err.message:'internal server error'
+        }) 
+    }
+}
 module.exports.createUser = createUser;
+module.exports.loginUser = loginUser;
