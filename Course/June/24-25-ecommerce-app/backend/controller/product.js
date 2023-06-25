@@ -2,7 +2,7 @@ const Product = require('../models/product');
 
 const createProduct= async(req,res)=>{
    try{
-    console.log(req.body);
+    console.log("inside the product controller",req.body);
     const post= new Product({...req.body});
     let result = await post.save();
     res.status(201).json({
