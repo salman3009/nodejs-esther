@@ -10,6 +10,7 @@ const Dashboard = () => {
     price: ''
   })
   const [getError, setError] = useState('');
+  const [getList,setList]=useState([]);
 
   const onChangeHandler = (event) => {
     setState({ ...getState, [event.target.name]: event.target.value })
@@ -24,6 +25,8 @@ const Dashboard = () => {
     axios.post('http://localhost:8080/api/product/create', getState).then(() => {
       setError('');
       alert("successfully data added");
+      getListDetails();
+      setState({productName:'',price:''});
     }).catch((err) => {
       if (err.response && err.response.data && err.response.data.message) {
         setError(err.response.data.message);
@@ -35,12 +38,31 @@ const Dashboard = () => {
 
   }
 
-  // useEffect(()=>{
-  //   if(!sessionStorage.getItem('token')){
-  //     alert("user data is not found");
-  //     navigate('/login');
-  //   }
-  // },[])
+  useEffect(()=>{
+    if(!sessionStorage.getItem('token')){
+      alert("user data is not found");
+      navigate('/login');
+    }else{
+      getListDetails();
+    }
+
+  },[])
+
+  const getListDetails=()=>{
+    axios.get('http://localhost:8080/api/product/list').then((result)=>{
+           console.log(result.data);
+           if(result.data && result.data.post){
+             setList(result.data.post);
+           }
+      }).catch((err)=>{
+        if (err.response && err.response.data && err.response.data.message) {
+          setError(err.response.data.message);
+        }
+        else {
+          setError("internal server error, try after sometime")
+        }
+      })
+  }
 
   return (<div>
     <h1 style={{ textAlign: 'center' }}>Welcome to Dashboard</h1>
@@ -53,11 +75,11 @@ const Dashboard = () => {
         <form>
           <div class="form-group">
             <label htmlFor="productName">Product Name</label>
-            <input type="text" className="form-control" onChange={onChangeHandler} id="productName" name="productName" />
+            <input type="text" className="form-control" value={getState.productName} onChange={onChangeHandler} id="productName" name="productName" />
           </div>
           <div class="form-group">
             <label htmlFor="price">Price</label>
-            <input type="number" className="form-control" onChange={onChangeHandler} id="price" name="price" />
+            <input type="number" className="form-control" value={getState.price} onChange={onChangeHandler} id="price" name="price" />
           </div>
           <button onClick={onSubmitDetails} type="submit" className="btn btn-primary">Add</button>
         </form>
@@ -77,30 +99,20 @@ const Dashboard = () => {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">product Name</th>
+              <th scope="col">Discount Price</th>
+              <th scope="col">Stock</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            {getList && getList.length>0 && getList.map((obj,index)=>{
+                 return (<tr key={index}> 
+                  <th scope="row">{index+1}</th>
+                  <td>{obj.productName}</td>
+                  <td>{obj.price}</td>
+                  <td>{obj.stock}</td>
+                </tr>)
+            })}
           </tbody>
         </table>
       </div>
