@@ -16,6 +16,22 @@ const createProduct= async(req,res)=>{
    }
 }
 
-module.exports.createProduct = createProduct;
+const getListProduct=async(req,res)=>{
+    try{
 
+        let result = await Product.find({email:req.body.email});
+        res.status(200).json({
+            message:'successful',
+            post:result
+        })
+
+    }catch(err){
+        res.status(500).json({
+            message:err.message?err.message:'internal server error'
+        })
+    }
+}
+
+module.exports.createProduct = createProduct;
+module.exports.getListProduct = getListProduct;
 

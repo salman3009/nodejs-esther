@@ -44,6 +44,7 @@ const Dashboard = () => {
 
   return (<div>
     <h1 style={{ textAlign: 'center' }}>Welcome to Dashboard</h1>
+    {getError && <h1 style={{color:'red',textAlign:'center'}}>{getError}</h1>}
     <div className="container">
       <div className="col-4">
 
@@ -65,6 +66,8 @@ const Dashboard = () => {
 
       </div>
     </div>
+    <br/>
+    <br/>
     <div className="container">
       <div className="col-1">
 

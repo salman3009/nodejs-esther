@@ -30,7 +30,7 @@
 		{
 			"name": "login",
 			"request": {
-				"url": "http://localhost:3000/api/user/login",
+				"url": "http://localhost:8080/api/user/login",
 				"method": "POST",
 				"header": [
 					{
@@ -41,7 +41,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"suresh@gmail.com\",\n    \"password\":\"12345\"\n}"
+					"raw": "{\n    \"email\": \"ramesh@gmail.com\",\n    \"password\":\"12345\"\n}"
 				},
 				"description": ""
 			},
@@ -61,7 +61,8 @@
 					{
 						"key": "authorization",
 						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cmVzaEBnbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VycyJdLCJpYXQiOjE2ODY0NjYxNDEsImV4cCI6MTY4NjQ2OTc0MX0.2BxB0PBhcHOb-q9_NObkpAXRZ9snft2qldmQR8cwj4s",
-						"description": ""
+						"description": "",
+						"disabled": true
 					},
 					{
 						"key": "token",
@@ -76,16 +77,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"productName\":\"LG\",\n   \"price\":4000,\n   \"discount\":true,\n   \"discountPrice\":1000,\n   \"stock\":24\n}"
+					"raw": "{\n   \"productName\":\"whirlpool\",\n   \"price\":5000,\n   \"discount\":true,\n   \"discountPrice\":200,\n   \"stock\":40\n}"
 				},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "getEmployee",
+			"name": "getProduct",
 			"request": {
-				"url": "http://localhost:3000/api/employee/employeeList/fetch",
+				"url": "http://localhost:8080/api/product/list",
 				"method": "GET",
 				"header": [
 					{
@@ -96,37 +97,23 @@
 					{
 						"key": "authorization",
 						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cmVzaEBnbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VycyJdLCJpYXQiOjE2ODY0NjYxNDEsImV4cCI6MTY4NjQ2OTc0MX0.2BxB0PBhcHOb-q9_NObkpAXRZ9snft2qldmQR8cwj4s",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"firstName\": \"amol\",\n    \"age\":\"45\",\n    \"salary\":45000\n}"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "updateEmployee",
-			"request": {
-				"url": "http://localhost:3000/api/employee/updateName/amol",
-				"method": "POST",
-				"header": [
+						"description": "",
+						"disabled": true
+					},
 					{
-						"key": "Content-Type",
-						"value": "application/json",
+						"key": "token",
+						"value": "xyz123",
 						"description": ""
 					},
 					{
-						"key": "authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cmVzaEBnbWFpbC5jb20iLCJyb2xlcyI6WyJ1c2VycyJdLCJpYXQiOjE2ODY0NjYzOTAsImV4cCI6MTY4NjQ2OTk5MH0.KPWX2BC5syOTvgsog6kFNgRwVTwTd1hILw28Qslv5us",
+						"key": "email",
+						"value": "suresh@gmail.com",
 						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"age\":\"50\"\n}"
+					"raw": "{\n   \"productName\":\"LG\",\n   \"price\":4000,\n   \"discount\":true,\n   \"discountPrice\":1000,\n   \"stock\":24\n}"
 				},
 				"description": ""
 			},
