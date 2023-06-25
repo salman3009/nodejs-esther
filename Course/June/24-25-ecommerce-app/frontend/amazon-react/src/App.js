@@ -4,8 +4,14 @@ import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import axios from 'axios';
 
 function App() {
+   axios.interceptors.request.use(async(config)=>{
+      config.headers['token'] = sessionStorage.getItem('token');
+      config.headers['email'] = sessionStorage.getItem('email');
+      return config;
+   })
   return (
    <div>
      <BrowserRouter>
