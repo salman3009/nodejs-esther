@@ -60,16 +60,20 @@ const findOperationAggregation=async()=>{
     //     {$project:{firstName:1,hobbies:1,salary:1,_id:0}}
     // ])
 
-    //$group
-    // let result = await Employee.aggregate([{$group:{_id:"$firstName"}}])
+     //$group - It will bring unqiue value from firstName field
+     // let result = await Employee.aggregate([{$group:{_id:"$firstName"}}])
 
-    // //$group - $sum
+    // //$group - $sum - It will bring unqiue value + for that unqiue value total salary if we have duplicate firstName it will add it together.
     // let result = await Employee.aggregate([{$group:{_id:"$firstName",totalAmount:{$sum:'$salary'}}}]);
 
-     //$group - $match
-     let result = await Employee.aggregate([{$group:{_id:"$firstName",totalAmount:{$sum:'$salary'}}},{$match:{totalAmount:{$gt:40000}}}]);
+     //$group - $match - It will bring unqiue value + for that unqiue value total salary if we have duplicate firstName it will add it together and after that it will filter the data with totalAmount:40000
+     //let result = await Employee.aggregate([{$group:{_id:"$firstName",totalAmount:{$sum:'$salary'}}},{$match:{totalAmount:{$gt:40000}}}]);
     
+     //$group - $avg - it will find the average field
+    // let result = await Employee.aggregate([{$group:{_id:null,averageDetails:{$avg:"$salary"}}}]);
 
+    //$group - $push - It will create one new array and it will start pushing the value.
+    let result = await Employee.aggregate([{$group:{_id:'$firstName',listSalary:{$push:'$salary'}}}]);
      
      console.log(result);
     }catch(err){
