@@ -73,8 +73,13 @@ const findOperationAggregation=async()=>{
     // let result = await Employee.aggregate([{$group:{_id:null,averageDetails:{$avg:"$salary"}}}]);
 
     //$group - $push - It will create one new array and it will start pushing the value.
-    let result = await Employee.aggregate([{$group:{_id:'$firstName',listSalary:{$push:'$salary'}}}]);
+   // let result = await Employee.aggregate([{$group:{_id:'$firstName',listSalary:{$push:'$salary'}}}]);
      
+   //$group 
+   //$dateToString 
+   let result = await Employee.aggregate([{$group:{_id:{$dateToString:{format:'%m-%d-%Y',date:'$date'}}}}]);
+
+
      console.log(result);
     }catch(err){
         console.log(err);

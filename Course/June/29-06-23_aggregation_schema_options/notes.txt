@@ -21,6 +21,9 @@ $sort - ascending:1,descending:-1
 $group - 
  _id - it will bring unique data from any of the field
  $sum - it will sum up the value 
- 
+ $match - it will filter data normal match , comparsion operator ,logical operator
+ $avg - finding average for particular field
+ $push  - will create new array and push the value
+ $dateToString - string format of date
 ===========================================
 
