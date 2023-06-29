@@ -13,5 +13,8 @@ Mongoose - aggregation
 //It help to read the data in optimized manner 
 //It is using the concept of pipeline.
 //Multiple queries we can able to read it one after another.
+//aggregation need to write inside the array bracket
+operation:
+$project -> bringing specific set of data.
 ===========================================
 
