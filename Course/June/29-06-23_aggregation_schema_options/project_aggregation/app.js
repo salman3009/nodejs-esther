@@ -31,9 +31,27 @@ const findOperationAggregation=async()=>{
     try{
     
     //$project
-     let result = await Employee.aggregate([{$project:{firstName:1,age:1,salary:1,_id:0}}]);
-     
-     
+    // let result = await Employee.aggregate([{$project:{firstName:1,age:1,salary:1,_id:0}}]);
+
+    //$match
+    // let result = await Employee.aggregate([
+    //     {$match:{firstName:'sathish',age:{$gte:25}}},
+    //     {$project:{firstName:1,age:1,salary:1,_id:0}}
+    // ])
+
+    // let result = await Employee.aggregate([
+    //     {$match:{firstName:'sathish'}},
+    //     {$match:{age:{$gte:25}}},
+    //     {$project:{firstName:1,age:1,salary:1,_id:0}}
+    // ])
+
+    //$sort
+    let result = await Employee.aggregate([
+        {$match:{age:{$gte:25}}},
+        {$sort:{salary:1}},
+        {$project:{firstName:1,age:1,salary:1,_id:0}}
+    ])
+
      
      console.log(result);
     }catch(err){

@@ -16,5 +16,7 @@ Mongoose - aggregation
 //aggregation need to write inside the array bracket
 operation:
 $project -> bringing specific set of data.
+$match-->filter
+$sort - ascending:1,descending:-1
 ===========================================
 
