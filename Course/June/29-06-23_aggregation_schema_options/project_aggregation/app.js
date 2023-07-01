@@ -46,6 +46,8 @@ const findOperationAggregation=async()=>{
     // ])
 
     //$sort
+    //ascending - 1 
+    //descending - -1
     // let result = await Employee.aggregate([
     //     {$match:{age:{$gte:25}}},
     //     {$sort:{salary:1}},

@@ -1,0 +1,11 @@
+Schema option:
+1.type
+2.required 
+3.set 
+4.unique
+5.default
+=============================
+virtual - properties:
+//This data is not present inside the database
+//But while displaying will create this property virtually.
+======================================
