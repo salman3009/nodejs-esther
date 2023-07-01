@@ -41,7 +41,7 @@ Middleware:
 4.Model Middleware 
         methods 
            1.insertMany
-
+===========================================================================
 Hooks 
 Save method   
     1.pre - before saving the data inside the database you want to do something
@@ -56,3 +56,14 @@ Save method
  5.findOneAndUpdate 
  6.update 
  7.aggregate    
+ =========================================================================='
+ validation:
+ 1.required 
+ 2.minlength 
+ 3.maxlength 
+ 4.min 
+ 5.max 
+ 6.validate 
+ 7.enum
+ ==================================================
+
