@@ -14,7 +14,7 @@ mongoose.connect(uri).then(()=>{
 const createOperation=async()=>{
     try{
        const employeePost = new Employee({
-           firstName:'amol^&',
+           firstName:'amoln',
            lastName:'sasi'
        })
        const result = await employeePost.save();

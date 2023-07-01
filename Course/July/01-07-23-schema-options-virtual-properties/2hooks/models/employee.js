@@ -19,6 +19,10 @@ employeeSchema.pre('save',async function(){
       }
 })
 
+employeeSchema.post('save',async function(doc){
+    console.log("after saving the data post method",doc);
+    console.log("triggering the mail");
+})
 
 
 
