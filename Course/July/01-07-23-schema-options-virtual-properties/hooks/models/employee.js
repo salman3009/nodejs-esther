@@ -6,6 +6,18 @@ const employeeSchema = mongoose.Schema({
     lastName:{type:String,required:true}
 })
 
+employeeSchema.pre('save',async function(){
+      console.log("before saving to database");
+      const user = this;
+      const regex = /^[a-zA-Z0-9]+$/;
+      const result = regex.test(user.firstName);
+      if(result){
+          return Promise.resolve();
+      }
+      else{
+          throw new Error('username is not alphanumeric');
+      }
+})
 
 
 
