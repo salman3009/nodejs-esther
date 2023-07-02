@@ -204,6 +204,27 @@ If there is any error while updating the product, the function should return a J
 const updateProduct = async (req, res) => {
     try {
         // Write Your Code Here
+        const {updatedData} = req.body;
+        
+        const product = await Product.findByIdAndUpdate(req.params.id,{
+            $set:updatedData
+        })
+
+        if(!product){
+            return res.status(404).json({
+                message:'Product Not Found',
+                status:'Error'
+            })
+        }
+
+        const updatedProduct = await Product.findById(req.params.id);
+        res.status(200).json({
+            status:'success',
+            message:'Product Updated Successfully',
+            data:{
+                updatedProduct
+            }
+        })
     } catch (err) {
         // console.log(err);
         res.status(400).json({
