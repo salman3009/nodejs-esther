@@ -11,7 +11,8 @@ const router = express.Router();
 
 // Public Routes
 router.get("/", grantAccessTo(['guest', 'user', 'admin', 'superadmin']), searchProducts);
-router.get("/:id", grantAccessTo(['guest', 'user', 'admin', 'superadmin']), getProductByID);
+// router.get("/:id", grantAccessTo(['guest', 'user', 'admin', 'superadmin']), getProductByID);
+router.get("/:id", getProductByID);
 
 //Admin Only Routes
 router.post("/", grantAccessTo(['admin', 'superadmin']), createProduct);
