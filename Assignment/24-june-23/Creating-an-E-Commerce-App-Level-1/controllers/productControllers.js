@@ -239,6 +239,19 @@ If an error occurs during the deletion process, return a JSON response with a st
 const deleteProduct = async (req, res) => {
     try {
        // Write Your Code Here
+       const product = await Product.findByIdAndDelete(req.params.id);
+       if(!product){
+         return res.status(404).json({
+             status:'Error',
+             message:'Product Not Found'
+         })
+       }
+       res.status(200).json({
+          status:'success',
+          data:null,
+          message:`Product ${product._id} deleted successfully"`
+
+       })
     } catch (err) {
         res.status(400).json({
             status: "Error",
