@@ -14,23 +14,23 @@ mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true }, () => 
 })
 
 //insert Products data to Mongodb
-for(var i=0;i<products_data.length;i++){
+// for(var i=0;i<products_data.length;i++){
 
-        var name, price, description, category;
-        name = products_data[i]["name"];
-        price = products_data[i]["price"];
-        description = products_data[i]["description"];
-        category = products_data[i]["category"];
+//         var name, price, description, category;
+//         name = products_data[i]["name"];
+//         price = products_data[i]["price"];
+//         description = products_data[i]["description"];
+//         category = products_data[i]["category"];
 
-        var newproduct = {
-            "name":name,
-            "description":description,
-            "price": price,
-            "category": category
-        };
+//         var newproduct = {
+//             "name":name,
+//             "description":description,
+//             "price": price,
+//             "category": category
+//         };
 
-        products.create(newproduct);
-}
+//         products.create(newproduct);
+// }
 
 app.listen(3000, () => console.log('Server running......'));
 

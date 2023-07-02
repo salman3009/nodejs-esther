@@ -15,6 +15,7 @@
     "chai-http": "^4.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "install": "^0.13.0",
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
     "mocha": "^8.2.1",
