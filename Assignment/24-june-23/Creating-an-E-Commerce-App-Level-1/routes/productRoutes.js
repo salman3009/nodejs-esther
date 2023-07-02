@@ -10,7 +10,8 @@ const { grantAccessTo } = require('../middlewares/grantAccessTo');
 const router = express.Router();
 
 // Public Routes
-router.get("/", grantAccessTo(['guest', 'user', 'admin', 'superadmin']), searchProducts);
+// router.get("/", grantAccessTo(['guest', 'user', 'admin', 'superadmin']), searchProducts);
+router.get("/", searchProducts);
 // router.get("/:id", grantAccessTo(['guest', 'user', 'admin', 'superadmin']), getProductByID);
 router.get("/:id", getProductByID);
 

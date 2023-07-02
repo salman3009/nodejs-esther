@@ -36,6 +36,35 @@ If no products match the search criteria, return a JSON response with a status c
 const searchProducts = async (req, res) => {
     try {
         // Write Your Code Here
+        const {search,category,minPrice,maxPrice,sort,page=1,limit=10} = req.query;
+        const query={};
+        if(search){
+            query.name = {$regex:search,$options:'i'}
+        }
+        if(category){
+            query.category = category;
+        }
+        if(minPrice && maxPrice){
+            query.price = {$gte:minPrice,$lte:maxPrice}
+        }
+        else if(minPrice){
+            query.price = {$gte:minPrice};
+        }
+        else if(maxPrice){
+            query.price = { $lte:maxPrice};
+        }
+        const sortOrder = sort === 'asc'?"price":"-price";
+
+        const products = await Product.find(query).limit(limit*1).skip((page-1)*limit).sort(sortOrder);
+        const count = await Product.countDocuments(query);
+        res.status(200).json({
+            status:'success',
+            data:{
+                count,products
+            }
+        })
+
+
     } catch (err) {
         res.status(404).json({
             message: "Products Not Found",
