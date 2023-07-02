@@ -26,6 +26,37 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/products/64a11036d8052428730219a8 - GETByID",
+			"request": {
+				"url": "http://localhost:3000/api/v1/products/64a11036d8052428730219a8",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/products/64a11036d8052428730219a8 - Delete",
+			"request": {
+				"url": "http://localhost:3000/api/v1/products/64a11036d8052428730219a8",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"role\":\"admin\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
