@@ -7,12 +7,19 @@ const employeeSchema = mongoose.Schema({
         required:[true,'firstName should not be empty'],
         minlength:[4,'minimum should be 4'],
         maxlength:[10,'maximum length is allowed 10'],
-        validate:{
-          validator:function(input){
-                      let pattern = /^[a-zA-Z0-9]+$/;
-                      return pattern.test(input);
-          },
-          message:'No pattern validation is matched'
+        // validate:{
+        //   validator:function(input){
+        //               let pattern = /^[a-zA-Z0-9]+$/;
+        //               return pattern.test(input);
+        //   },
+        //   message:'No pattern validation is matched'
+        // }
+        validate(input){
+          let pattern = /^[a-zA-Z0-9]+$/;
+           let result = pattern.test(input);
+           if(!result){
+               throw new Error('pattern not matched');
+           }
         }
       },
       age:{
