@@ -23,6 +23,7 @@ const createOperation = async()=>{
     //   })
 
     const employeePost = new Employee({
+        firstName:'ramesh',
         hobbies:['cricket']
      })
 
