@@ -24,7 +24,9 @@ const createOperation = async()=>{
 
     const employeePost = new Employee({
         firstName:'ramesh',
-        hobbies:['cricket']
+        hobbies:['cricket','music'],
+        age:33,
+        salary:25000
      })
 
       const result = await employeePost.save();
