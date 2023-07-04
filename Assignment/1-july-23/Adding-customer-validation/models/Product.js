@@ -12,17 +12,29 @@ const productSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        //Add a Custom Validation Here
+        validate(input){
+            if(input.length < 3){
+                throw new Error('Product name must be at least 3 characters long');
+            }
+        }
     },
     description: {
         type: String,
         required: true,
-        //Add a Custom Validation Here
+        validate(input){
+            if(input.length < 10){
+                throw new Error ('Description must be least 10 characters long');
+            }
+        }
     },
     price: {
         type: Number,
         required: true,
-        //Add a Custom Validation Here
+         validate(input){
+            if(value < 0){
+                throw new Error('Price must be a positive number');
+            }
+         }
     },
     category: {
         type: String,
