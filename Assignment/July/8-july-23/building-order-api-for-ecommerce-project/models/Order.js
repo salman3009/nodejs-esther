@@ -37,7 +37,9 @@ const orderSchema = new Schema({
         required:true,
         default:1,
         validate(value){
-          throw new Error('Quantity must be a positive number')
+          if(value <1){
+            throw new Error('Quantity must be a positive number');
+          } 
         }
       }
     }
@@ -51,6 +53,20 @@ const orderSchema = new Schema({
         throw new Error('Total Price must be a positive number')
       }
     }
+  },
+  status:{
+    type:String,
+    enum:['pending','processing','shipped','delivered'],
+    default:'pending'
+  },
+  shippingAddress:{
+    type:String,
+    required:true
+  },
+  paymentMethod:{
+    type:String,
+    enum:['cash','credit card','debit card','upi'],
+    required:true
   }
 }, { timestamps: true });
 
