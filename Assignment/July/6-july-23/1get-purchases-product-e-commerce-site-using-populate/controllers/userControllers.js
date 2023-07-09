@@ -59,7 +59,7 @@ const getProductsPurchasedByUser = async (req, res) => {
             message:'Products Purchased by User',
             status: "success",
             data:{
-                product:user
+                products:user
             }
 
         })
