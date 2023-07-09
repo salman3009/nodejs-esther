@@ -44,6 +44,16 @@ const placeOrder = async (req, res) => {
 
     try {
         //Write your code here
+        const order = new Order({
+            user:userId,
+            products:products.map(item=>({
+                product:item.productId,
+                quantity:item.quantity
+            })),
+            shippingAddress,
+            paymentMethod
+        })
+
     } catch (err) {
         console.log(err);
         return res.status(500).json({
