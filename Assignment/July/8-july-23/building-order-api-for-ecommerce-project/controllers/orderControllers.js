@@ -54,6 +54,32 @@ const placeOrder = async (req, res) => {
             paymentMethod
         })
 
+        let totalPrice = 0;
+        for(const item of products){
+            const prod = await Product.findById(item.product);
+            totalPrice +=prod.price * item.quantity;
+        }
+        order.totalPrice = totalPrice;
+
+        await order.save();
+        
+        const cart = await Cart.findOne({user:userId});
+        if(cart){
+            await cart.updateOne({
+                $pull:{
+                    products:{
+                        product:{$in:products.map(item=>item.productId)}
+                    }
+                }
+            })
+        }
+
+        return res.status(200).json({
+            message:'Order placed successfully',
+            status:'Success',
+            order
+        });
+
     } catch (err) {
         console.log(err);
         return res.status(500).json({
