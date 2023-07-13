@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import axios from 'axios';
 const Register = () => {
 
     const [getData,setData] = useState({
@@ -17,7 +18,11 @@ const Register = () => {
              alert('please provide the details');
              return ;
          }
-         console.log(getData);
+         axios.post('http://localhost:8080/api/user/register',getData).then(()=>{
+            alert("successful");
+         }).catch(()=>{
+            alert("internal server error");
+         })
     }
 
     return (<div className="container">
